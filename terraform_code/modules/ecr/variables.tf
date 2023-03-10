@@ -7,7 +7,7 @@ variable "ecr_name" {
 variable "image_mutability" {
   description = "Provide image mutability"
   type        = string
-  default     = "IMMUTABLE"
+  default     = "MUTABLE"
 }
 
 

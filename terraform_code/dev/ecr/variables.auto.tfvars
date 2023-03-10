@@ -7,4 +7,4 @@ ecr_name = [
   "assgn_2nd"
 ]
 
-image_mutability = "IMMUTABLE"
+image_mutability = "MUTABLE"
