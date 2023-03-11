@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysqlpod
+  
+spec:
+  containers:
+   - name: mysqlcontainer
+     image: 372159200162.dkr.ecr.us-east-1.amazonaws.com/assignment1:v0.2
+     ports:
+      - containerPort: 3306
+     env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: pw
+  imagePullSecrets:
+    - name: regcred
+      
