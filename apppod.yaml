@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapplication
+spec:
+  containers:
+    - name: appcontainer
+      image: 372159200162.dkr.ecr.us-east-1.amazonaws.com/assgn_2nd:v0.2
+      ports:
+        - containerPort: 8080
+      env:
+        - name: DBPWD
+          value: pw
+        - name: DBPORT
+          value: "3306"
+        - name: DBHOST
+          value: "mysqlservice.database.svc.cluster.local"
+        - name: DBUSER
+          value: "root"
+  imagePullSecrets:
+    - name: regcred
